@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <style>
+        .city {
+            background-color: tomato;
+            color: white;
+            padding: 10px;
+        }
+
+        .main {
+            text-align: center;
+        }
+    </style>
+    <title>HTML The class Attribute</title>
+</head>
+
+<body>
+
+    <h1>HTML The class Attribute</h1>
+
+    <hr>
+
+    <h2 class="city">London</h2>
+    <p>London is the capital of England.</p>
+
+    <h2 class="city">Paris</h2>
+    <p>Paris is the capital of France.</p>
+
+    <h2 class="city">Tokyo</h2>
+    <p>Tokyo is the capital of Japan.</p>
+
+    <hr>
+
+    <h1>Using The class Attribute in JavaScript</h1>
+
+    <script>
+        function removeCities() {
+            var x = document.getElementsByClassName("city");
+            for (var i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+        }
+    </script>
+
+    <button onclick="removeCities();">Remove Cities</button>
+
+    <hr>
+
+    <h1>Multiple Classes</h1>
+
+    <h2 class="city main">London</h2>
+    <h2 class="city">Paris</h2>
+    <h2 class="city">Tokyo</h2>
+
+    <hr>
+
+    <h2>Same Class, Different Tag</h2>
+    <h2 class="city">Paris</h2>
+    <p class="city">Paris is the capital of France</p>
+
+
+</body>
+
+</html>
