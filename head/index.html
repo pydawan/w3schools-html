@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="John Doe">
+    <link rel="stylesheet" href="mystyle.css">
+    <style>
+        body {
+            background-color: powderblue;
+        }
+
+        h1 {
+            color: red;
+        }
+
+        p {
+            color: blue;
+        }
+    </style>
+    <base href="../static/img/" target="_blank">
+    <title>The HTML &lt;head&gt; Element</title>
+</head>
+
+<body>
+    <!--
+        1. O elemento <head> é um container para metadados (dados sobre dados).
+        2. Metadados HTML são dados sobre o documento HTML.
+        3. Metadados não são exibidos (não compõe a GUI apresentada pelo navegador).
+        4. As tags a seguir descrevem metadados: <title>, <style>, <meta>, <link>, <script> e <base>.
+    -->
+    <h1>The HTML &lt;head&gt; Element</h1>
+
+    <hr>
+
+    <h2>The HTML &lt;title&gt; Element</h2>
+    <!--
+        1. O elemento <title> define o título do documento e é exigido in todos documentos
+            HTML/XHTML.
+        2. Define um título de uma aba ou janela do navegador.
+        3. Fornece um título para uma página ao ser adicionada nos favoritos.
+        4. Mostra um título para uma página em resultados de mecanismos de pesquisa.
+    -->
+
+    <hr>
+
+    <h2>The HTML &lt;style&gt; Element</h2>
+    <!--
+        1. O elemento <style> é usado para definir informação de estilo para uma única página HTML.
+    -->
+
+    <hr>
+
+    <h2>The HTML &lt;link&gt; Element</h2>
+
+    <!--
+        1. O elemento <link> é usado para vincular o documento a folhas de estilo externas.
+
+        <link rel="stylesheet" href="mystyle.css">
+    -->
+
+    <hr>
+
+    <h2>The HTML &lt;meta&gt; Element</h2>
+
+    <!--
+        1. O elemento <meta> é usado para especificar qual conjunto de caracteres é usado,
+            a descrição da página, palavras chave, autor e outros metadados.
+        2. Os metadados são usados pelos navegadores (como exibir o conteúdo), por mecanismos de busca (keywords)
+            e outros web services.
+        
+        Exemplos:
+
+        Define o conjunto de caracteres usado:
+            <meta charset="UTF-8">
+
+        Define a descrição de sua página web:
+            <meta name="description" content="Free Web Tutorials">
+        
+        Define palavras chave para mecanismos de busca:
+            <meta name="keywords" content="HTML, CSS, XML, JavaScript">
+        
+        Define o autor da página:
+            <meta name="author" content="John Doe">
+        
+        Atualiza o documento a cada 30 segundos:
+            <meta http-equiv="refresh" content="30">
+
+    -->
+
+    <hr>
+
+    <h2>Setting Viewport</h2>
+
+    <!--
+        1. O HTML5 introduziu um método que deixa os web designers ter controle sobre
+            a janela de exibição (viewport) através da tag <meta>.
+
+        2. O viewport é a área visível da página web do usuário. Ela varia com o dispositivo
+            e será menor em um telefone móvel do que em uma janela de computador.
+
+        3. Você deve incluir o elemento <meta> em todas as suas páginas web:
+
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        
+        4. O elemento <meta> viewport dá ao navegador instruções de como controlar as 
+            dimensões e a escala da página.
+
+           A parte width=device-width define a largura da página para seguir a largura da
+           tela (que variará dependendo do dispositivo).
+
+           A parte initial-scale=1 define o nível de aproximação (zoom) inicial no primeiro
+           carregamento da página pelo navegador.
+    -->
+    <hr>
+
+    <h1 id="demo"></h1>
+
+    <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Hello JavaScript!";
+        }
+
+        myFunction();
+    </script>
+
+    <hr>
+
+    <h2>The HTML &lt;base&gt; Element</h2>
+
+    <!--
+        1. O elemento <base> especifica a URL base e o alvo base para todas as URLs relativas na página.
+    -->
+
+    <img src="html5.gif">
+    <p>
+        Uma vez que nós especificamos uma URL base, o navegador pesquisará pela imagem
+        "html5.gif" em "../static/img/html5.gif"
+    </p>
+
+    <p><a href="https://www.w3schools.com">W3Schools</a></p>
+    <p>
+        O link acima irá abrir em uma nova janela. Isto porque o alvo (target) base
+        está definido como "_blank".
+    </p>
+
+</body>
+
+</html>
