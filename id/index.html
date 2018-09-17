@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        /* Estiliza (controla a aparência) o elemento com id igual a myHeader. */
+
+        #myHeader {
+            background-color: lightblue;
+            color: black;
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Estiliza o grupo de elementos com a classe city. */
+        .city {
+            background-color: tomato;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+    <title>HTML The id Attribute</title>
+</head>
+
+<body>
+
+    <h1>HTML The id Attribute</h1>
+    <!--
+        O atributo id especifica um id (identificador) único para um elemento HTML (o valor
+        deve ser único no documento HTML).
+
+        1. Um id identifica um elemento enquanto que uma classe identifica um conjunto.
+        2. Um valor de id pode ser utilizado pelo CSS ou pelo JavaScript para desempenhar
+           algumas tarefas com o elemento associado a ele.
+    -->
+
+    <!-- Elemento único -->
+    <h1 id="myHeader">My Header</h1>
+
+    <!-- Múltiplos elementos similares -->
+    <h2 class="city">London</h2>
+    <p>London is the capital of England.</p>
+
+    <h2 class="city">Paris</h2>
+    <p>Paris is the capital of France.</p>
+
+    <h2 class="city">Tokyo</h2>
+    <p>Tokyo is the capital of Japan.</p>
+
+    <hr>
+
+    <h1>Using Tthe id Attribute in JavaScript</h1>
+
+    <script>
+        function displayResult() {
+            document.getElementById("myHeader").innerHTML = "Have a nice day!";
+        }
+    </script>
+
+    <button onclick="displayResult()">Change text</button>
+
+    <hr>
+
+    <h1>Bookmarks (Marcadores) with ID and Links</h1>
+    <!--
+        1. Crie um marcador com o atributo id.
+            <h2 id="C4">Chapter 4</h2>
+
+        2. Crie um link (vínculo) com o marcador.
+            <a href="#C4">Jump to Chapter 4</a>
+        
+        3. Crie um link para um bookmark em outra página.
+            <a href="html_demo.html#C4">Jump to Chapter 4</a>
+    -->
+
+    <h1>Sumário</h1>
+    <a href="#capitulo1">Capítulo 1</a><br>
+    <a href="#capitulo2">Capítulo 2</a><br>
+    <a href="#capitulo3">Capítulo 3</a><br>
+    <a href="#capitulo4">Capítulo 4</a><br>
+    <a href="#capitulo5">Capítulo 5</a><br>
+    <a href="#capitulo6">Capítulo 6</a><br>
+    <a href="#capitulo7">Capítulo 7</a>
+
+    <h2 id="capitulo1">Capítulo 1</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, consequuntur. Quos aliquam quidem consequatur
+        dolores. Aliquam, amet commodi laboriosam id temporibus veritatis quae incidunt doloribus, ipsa recusandae
+        quisquam sequi! Deserunt.
+        Eligendi accusantium aliquam, odio nesciunt omnis necessitatibus? Inventore corporis quas optio ratione maxime
+        veniam eveniet dignissimos architecto obcaecati. Eligendi sed soluta quisquam natus magnam eveniet error
+        perspiciatis voluptas. Sequi, praesentium!
+        Nobis provident fuga ea eaque nisi dolore ipsam quos, quae pariatur consequatur nihil dicta distinctio,
+        mollitia ad architecto minus quo asperiores molestiae dolorem illo voluptate. Debitis nihil delectus error cum!
+        Reprehenderit perferendis corporis tempore ipsum quibusdam impedit soluta excepturi rerum. Mollitia unde, ipsum
+        ab dignissimos asperiores esse magni! Recusandae delectus rem saepe assumenda vel soluta unde deleniti eaque ut
+        quisquam!
+        Ipsam consequatur dolorum, tenetur ipsa adipisci quia cumque laudantium repellendus harum, quisquam itaque
+        asperiores! Eos, omnis possimus consequatur aspernatur ex facilis provident similique beatae fugit dolor eum
+        praesentium. Aspernatur, ea.
+        Labore unde reprehenderit deserunt, recusandae sed error asperiores corporis quae reiciendis earum sint
+        laboriosam consequatur maxime voluptatem. Culpa vitae quaerat ratione perspiciatis numquam nulla facilis nobis
+        sint. Dolorem, laudantium quas!
+        Vel nesciunt dolores sed, molestiae possimus minima unde quo, adipisci explicabo voluptate fugiat, libero
+        aspernatur praesentium amet. Laudantium ut voluptas quae, consequuntur harum aliquid dignissimos rerum autem
+        laboriosam quidem eveniet?
+        Autem nulla illo, illum culpa dolore ullam impedit suscipit optio corporis sint inventore non est. Quasi
+        doloribus inventore provident esse. Adipisci odit sed corrupti facere. Blanditiis, possimus! Dolore, ea
+        officiis.
+        Dolorum quidem quas veniam eos sequi. Provident expedita obcaecati dolorum at hic quae dolores cumque, corrupti
+        impedit sequi, eius ducimus unde non laudantium perferendis esse sunt consequuntur odit, modi recusandae.
+        Dolorum magnam nobis maxime. Deleniti quos sunt nemo nobis reprehenderit ut quod totam eius at autem, neque,
+        iusto eum voluptate alias ipsam velit accusantium cumque in rerum optio corrupti. Eum.
+    </p>
+    <h2 id="capitulo2">Capítulo 2</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, consequuntur. Quos aliquam quidem consequatur
+        dolores. Aliquam, amet commodi laboriosam id temporibus veritatis quae incidunt doloribus, ipsa recusandae
+        quisquam sequi! Deserunt.
+        Eligendi accusantium aliquam, odio nesciunt omnis necessitatibus? Inventore corporis quas optio ratione maxime
+        veniam eveniet dignissimos architecto obcaecati. Eligendi sed soluta quisquam natus magnam eveniet error
+        perspiciatis voluptas. Sequi, praesentium!
+        Nobis provident fuga ea eaque nisi dolore ipsam quos, quae pariatur consequatur nihil dicta distinctio,
+        mollitia ad architecto minus quo asperiores molestiae dolorem illo voluptate. Debitis nihil delectus error cum!
+        Reprehenderit perferendis corporis tempore ipsum quibusdam impedit soluta excepturi rerum. Mollitia unde, ipsum
+        ab dignissimos asperiores esse magni! Recusandae delectus rem saepe assumenda vel soluta unde deleniti eaque ut
+        quisquam!
+        Ipsam consequatur dolorum, tenetur ipsa adipisci quia cumque laudantium repellendus harum, quisquam itaque
+        asperiores! Eos, omnis possimus consequatur aspernatur ex facilis provident similique beatae fugit dolor eum
+        praesentium. Aspernatur, ea.
+        Labore unde reprehenderit deserunt, recusandae sed error asperiores corporis quae reiciendis earum sint
+        laboriosam consequatur maxime voluptatem. Culpa vitae quaerat ratione perspiciatis numquam nulla facilis nobis
+        sint. Dolorem, laudantium quas!
+        Vel nesciunt dolores sed, molestiae possimus minima unde quo, adipisci explicabo voluptate fugiat, libero
+        aspernatur praesentium amet. Laudantium ut voluptas quae, consequuntur harum aliquid dignissimos rerum autem
+        laboriosam quidem eveniet?
+        Autem nulla illo, illum culpa dolore ullam impedit suscipit optio corporis sint inventore non est. Quasi
+        doloribus inventore provident esse. Adipisci odit sed corrupti facere. Blanditiis, possimus! Dolore, ea
+        officiis.
+        Dolorum quidem quas veniam eos sequi. Provident expedita obcaecati dolorum at hic quae dolores cumque, corrupti
+        impedit sequi, eius ducimus unde non laudantium perferendis esse sunt consequuntur odit, modi recusandae.
+        Dolorum magnam nobis maxime. Deleniti quos sunt nemo nobis reprehenderit ut quod totam eius at autem, neque,
+        iusto eum voluptate alias ipsam velit accusantium cumque in rerum optio corrupti. Eum.
+    </p>
+
+    <h2 id="capitulo3">Capítulo 3</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, consequuntur. Quos aliquam quidem consequatur
+        dolores. Aliquam, amet commodi laboriosam id temporibus veritatis quae incidunt doloribus, ipsa recusandae
+        quisquam sequi! Deserunt.
+        Eligendi accusantium aliquam, odio nesciunt omnis necessitatibus? Inventore corporis quas optio ratione maxime
+        veniam eveniet dignissimos architecto obcaecati. Eligendi sed soluta quisquam natus magnam eveniet error
+        perspiciatis voluptas. Sequi, praesentium!
+        Nobis provident fuga ea eaque nisi dolore ipsam quos, quae pariatur consequatur nihil dicta distinctio,
+        mollitia ad architecto minus quo asperiores molestiae dolorem illo voluptate. Debitis nihil delectus error cum!
+        Reprehenderit perferendis corporis tempore ipsum quibusdam impedit soluta excepturi rerum. Mollitia unde, ipsum
+        ab dignissimos asperiores esse magni! Recusandae delectus rem saepe assumenda vel soluta unde deleniti eaque ut
+        quisquam!
+        Ipsam consequatur dolorum, tenetur ipsa adipisci quia cumque laudantium repellendus harum, quisquam itaque
+        asperiores! Eos, omnis possimus consequatur aspernatur ex facilis provident similique beatae fugit dolor eum
+        praesentium. Aspernatur, ea.
+        Labore unde reprehenderit deserunt, recusandae sed error asperiores corporis quae reiciendis earum sint
+        laboriosam consequatur maxime voluptatem. Culpa vitae quaerat ratione perspiciatis numquam nulla facilis nobis
+        sint. Dolorem, laudantium quas!
+        Vel nesciunt dolores sed, molestiae possimus minima unde quo, adipisci explicabo voluptate fugiat, libero
+        aspernatur praesentium amet. Laudantium ut voluptas quae, consequuntur harum aliquid dignissimos rerum autem
+        laboriosam quidem eveniet?
+        Autem nulla illo, illum culpa dolore ullam impedit suscipit optio corporis sint inventore non est. Quasi
+        doloribus inventore provident esse. Adipisci odit sed corrupti facere. Blanditiis, possimus! Dolore, ea
+        officiis.
+        Dolorum quidem quas veniam eos sequi. Provident expedita obcaecati dolorum at hic quae dolores cumque, corrupti
+        impedit sequi, eius ducimus unde non laudantium perferendis esse sunt consequuntur odit, modi recusandae.
+        Dolorum magnam nobis maxime. Deleniti quos sunt nemo nobis reprehenderit ut quod totam eius at autem, neque,
+        iusto eum voluptate alias ipsam velit accusantium cumque in rerum optio corrupti. Eum.
+    </p>
+
+    <h2 id="capitulo4">Capítulo 4</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, consequuntur. Quos aliquam quidem consequatur
+        dolores. Aliquam, amet commodi laboriosam id temporibus veritatis quae incidunt doloribus, ipsa recusandae
+        quisquam sequi! Deserunt.
+        Eligendi accusantium aliquam, odio nesciunt omnis necessitatibus? Inventore corporis quas optio ratione maxime
+        veniam eveniet dignissimos architecto obcaecati. Eligendi sed soluta quisquam natus magnam eveniet error
+        perspiciatis voluptas. Sequi, praesentium!
+        Nobis provident fuga ea eaque nisi dolore ipsam quos, quae pariatur consequatur nihil dicta distinctio,
+        mollitia ad architecto minus quo asperiores molestiae dolorem illo voluptate. Debitis nihil delectus error cum!
+        Reprehenderit perferendis corporis tempore ipsum quibusdam impedit soluta excepturi rerum. Mollitia unde, ipsum
+        ab dignissimos asperiores esse magni! Recusandae delectus rem saepe assumenda vel soluta unde deleniti eaque ut
+        quisquam!
+        Ipsam consequatur dolorum, tenetur ipsa adipisci quia cumque laudantium repellendus harum, quisquam itaque
+        asperiores! Eos, omnis possimus consequatur aspernatur ex facilis provident similique beatae fugit dolor eum
+        praesentium. Aspernatur, ea.
+        Labore unde reprehenderit deserunt, recusandae sed error asperiores corporis quae reiciendis earum sint
+        laboriosam consequatur maxime voluptatem. Culpa vitae quaerat ratione perspiciatis numquam nulla facilis nobis
+        sint. Dolorem, laudantium quas!
+        Vel nesciunt dolores sed, molestiae possimus minima unde quo, adipisci explicabo voluptate fugiat, libero
+        aspernatur praesentium amet. Laudantium ut voluptas quae, consequuntur harum aliquid dignissimos rerum autem
+        laboriosam quidem eveniet?
+        Autem nulla illo, illum culpa dolore ullam impedit suscipit optio corporis sint inventore non est. Quasi
+        doloribus inventore provident esse. Adipisci odit sed corrupti facere. Blanditiis, possimus! Dolore, ea
+        officiis.
+        Dolorum quidem quas veniam eos sequi. Provident expedita obcaecati dolorum at hic quae dolores cumque, corrupti
+        impedit sequi, eius ducimus unde non laudantium perferendis esse sunt consequuntur odit, modi recusandae.
+        Dolorum magnam nobis maxime. Deleniti quos sunt nemo nobis reprehenderit ut quod totam eius at autem, neque,
+        iusto eum voluptate alias ipsam velit accusantium cumque in rerum optio corrupti. Eum.
+    </p>
+
+    <h2 id="capitulo5">Capítulo 5</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, consequuntur. Quos aliquam quidem consequatur
+        dolores. Aliquam, amet commodi laboriosam id temporibus veritatis quae incidunt doloribus, ipsa recusandae
+        quisquam sequi! Deserunt.
+        Eligendi accusantium aliquam, odio nesciunt omnis necessitatibus? Inventore corporis quas optio ratione maxime
+        veniam eveniet dignissimos architecto obcaecati. Eligendi sed soluta quisquam natus magnam eveniet error
+        perspiciatis voluptas. Sequi, praesentium!
+        Nobis provident fuga ea eaque nisi dolore ipsam quos, quae pariatur consequatur nihil dicta distinctio,
+        mollitia ad architecto minus quo asperiores molestiae dolorem illo voluptate. Debitis nihil delectus error cum!
+        Reprehenderit perferendis corporis tempore ipsum quibusdam impedit soluta excepturi rerum. Mollitia unde, ipsum
+        ab dignissimos asperiores esse magni! Recusandae delectus rem saepe assumenda vel soluta unde deleniti eaque ut
+        quisquam!
+        Ipsam consequatur dolorum, tenetur ipsa adipisci quia cumque laudantium repellendus harum, quisquam itaque
+        asperiores! Eos, omnis possimus consequatur aspernatur ex facilis provident similique beatae fugit dolor eum
+        praesentium. Aspernatur, ea.
+        Labore unde reprehenderit deserunt, recusandae sed error asperiores corporis quae reiciendis earum sint
+        laboriosam consequatur maxime voluptatem. Culpa vitae quaerat ratione perspiciatis numquam nulla facilis nobis
+        sint. Dolorem, laudantium quas!
+        Vel nesciunt dolores sed, molestiae possimus minima unde quo, adipisci explicabo voluptate fugiat, libero
+        aspernatur praesentium amet. Laudantium ut voluptas quae, consequuntur harum aliquid dignissimos rerum autem
+        laboriosam quidem eveniet?
+        Autem nulla illo, illum culpa dolore ullam impedit suscipit optio corporis sint inventore non est. Quasi
+        doloribus inventore provident esse. Adipisci odit sed corrupti facere. Blanditiis, possimus! Dolore, ea
+        officiis.
+        Dolorum quidem quas veniam eos sequi. Provident expedita obcaecati dolorum at hic quae dolores cumque, corrupti
+        impedit sequi, eius ducimus unde non laudantium perferendis esse sunt consequuntur odit, modi recusandae.
+        Dolorum magnam nobis maxime. Deleniti quos sunt nemo nobis reprehenderit ut quod totam eius at autem, neque,
+        iusto eum voluptate alias ipsam velit accusantium cumque in rerum optio corrupti. Eum.
+    </p>
+
+    <h2 id="capitulo6">Capítulo 6</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, consequuntur. Quos aliquam quidem consequatur
+        dolores. Aliquam, amet commodi laboriosam id temporibus veritatis quae incidunt doloribus, ipsa recusandae
+        quisquam sequi! Deserunt.
+        Eligendi accusantium aliquam, odio nesciunt omnis necessitatibus? Inventore corporis quas optio ratione maxime
+        veniam eveniet dignissimos architecto obcaecati. Eligendi sed soluta quisquam natus magnam eveniet error
+        perspiciatis voluptas. Sequi, praesentium!
+        Nobis provident fuga ea eaque nisi dolore ipsam quos, quae pariatur consequatur nihil dicta distinctio,
+        mollitia ad architecto minus quo asperiores molestiae dolorem illo voluptate. Debitis nihil delectus error cum!
+        Reprehenderit perferendis corporis tempore ipsum quibusdam impedit soluta excepturi rerum. Mollitia unde, ipsum
+        ab dignissimos asperiores esse magni! Recusandae delectus rem saepe assumenda vel soluta unde deleniti eaque ut
+        quisquam!
+        Ipsam consequatur dolorum, tenetur ipsa adipisci quia cumque laudantium repellendus harum, quisquam itaque
+        asperiores! Eos, omnis possimus consequatur aspernatur ex facilis provident similique beatae fugit dolor eum
+        praesentium. Aspernatur, ea.
+        Labore unde reprehenderit deserunt, recusandae sed error asperiores corporis quae reiciendis earum sint
+        laboriosam consequatur maxime voluptatem. Culpa vitae quaerat ratione perspiciatis numquam nulla facilis nobis
+        sint. Dolorem, laudantium quas!
+        Vel nesciunt dolores sed, molestiae possimus minima unde quo, adipisci explicabo voluptate fugiat, libero
+        aspernatur praesentium amet. Laudantium ut voluptas quae, consequuntur harum aliquid dignissimos rerum autem
+        laboriosam quidem eveniet?
+        Autem nulla illo, illum culpa dolore ullam impedit suscipit optio corporis sint inventore non est. Quasi
+        doloribus inventore provident esse. Adipisci odit sed corrupti facere. Blanditiis, possimus! Dolore, ea
+        officiis.
+        Dolorum quidem quas veniam eos sequi. Provident expedita obcaecati dolorum at hic quae dolores cumque, corrupti
+        impedit sequi, eius ducimus unde non laudantium perferendis esse sunt consequuntur odit, modi recusandae.
+        Dolorum magnam nobis maxime. Deleniti quos sunt nemo nobis reprehenderit ut quod totam eius at autem, neque,
+        iusto eum voluptate alias ipsam velit accusantium cumque in rerum optio corrupti. Eum.
+    </p>
+
+    <h2 id="capitulo7">Capítulo 7</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, consequuntur. Quos aliquam quidem consequatur
+        dolores. Aliquam, amet commodi laboriosam id temporibus veritatis quae incidunt doloribus, ipsa recusandae
+        quisquam sequi! Deserunt.
+        Eligendi accusantium aliquam, odio nesciunt omnis necessitatibus? Inventore corporis quas optio ratione maxime
+        veniam eveniet dignissimos architecto obcaecati. Eligendi sed soluta quisquam natus magnam eveniet error
+        perspiciatis voluptas. Sequi, praesentium!
+        Nobis provident fuga ea eaque nisi dolore ipsam quos, quae pariatur consequatur nihil dicta distinctio,
+        mollitia ad architecto minus quo asperiores molestiae dolorem illo voluptate. Debitis nihil delectus error cum!
+        Reprehenderit perferendis corporis tempore ipsum quibusdam impedit soluta excepturi rerum. Mollitia unde, ipsum
+        ab dignissimos asperiores esse magni! Recusandae delectus rem saepe assumenda vel soluta unde deleniti eaque ut
+        quisquam!
+        Ipsam consequatur dolorum, tenetur ipsa adipisci quia cumque laudantium repellendus harum, quisquam itaque
+        asperiores! Eos, omnis possimus consequatur aspernatur ex facilis provident similique beatae fugit dolor eum
+        praesentium. Aspernatur, ea.
+        Labore unde reprehenderit deserunt, recusandae sed error asperiores corporis quae reiciendis earum sint
+        laboriosam consequatur maxime voluptatem. Culpa vitae quaerat ratione perspiciatis numquam nulla facilis nobis
+        sint. Dolorem, laudantium quas!
+        Vel nesciunt dolores sed, molestiae possimus minima unde quo, adipisci explicabo voluptate fugiat, libero
+        aspernatur praesentium amet. Laudantium ut voluptas quae, consequuntur harum aliquid dignissimos rerum autem
+        laboriosam quidem eveniet?
+        Autem nulla illo, illum culpa dolore ullam impedit suscipit optio corporis sint inventore non est. Quasi
+        doloribus inventore provident esse. Adipisci odit sed corrupti facere. Blanditiis, possimus! Dolore, ea
+        officiis.
+        Dolorum quidem quas veniam eos sequi. Provident expedita obcaecati dolorum at hic quae dolores cumque, corrupti
+        impedit sequi, eius ducimus unde non laudantium perferendis esse sunt consequuntur odit, modi recusandae.
+        Dolorum magnam nobis maxime. Deleniti quos sunt nemo nobis reprehenderit ut quod totam eius at autem, neque,
+        iusto eum voluptate alias ipsam velit accusantium cumque in rerum optio corrupti. Eum.
+    </p>
+
+</body>
+
+</html>
