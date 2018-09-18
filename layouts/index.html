@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Style the header */
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        /* Create two columns/boxes that floats next to each other */
+        nav {
+            float: left;
+            width: 30%;
+            height: 300px;
+            /* only for demonstration, should be removed */
+            background: #ccc;
+            padding: 20px;
+        }
+
+        /* Style the list inside the menu */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 300px;
+            /* only for demonstration, should be removed */
+        }
+
+        /* Clear floats after the columns */
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Style the footer */
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+    <title>HTML Layouts</title>
+</head>
+
+<body>
+
+    <!--
+        =================================================
+        HTML Layout Elements
+        =================================================
+
+        Websites frequentemente mostram conteúdo em múltiplas colunas (como em uma revista ou um jornal).
+        
+        O HTML5 oferece novos elementos semânticos que definem diferentes partes de uma página web:
+
+        <header>  - Define um cabeçalho para um documento ou uma seção do documento.
+        <nav>     - Define um container para links de navegação.
+        <section> - Define uma seção em um documento.
+        <article> - Define um artigo independente e auto-contido.
+        <aside>   - Define o conteúdo ao lado do conteúdo principal (como uma barra lateral).
+        <footer>  - Defne um rodapé para um documento ou seção do documento.
+        <details> - Define detalhes adicionais.
+        <summary> - Define um cabeçalho para os elementos <details>.
+
+    
+        =================================================
+        HTML Layout Techniques
+        =================================================
+
+        Existem quatro maneiras diferentes de criar layouts multicolunares. Cada maneira com seus prós e contras:
+
+        HTML tables (not recommended)
+        CSS float property
+        CSS flexbox
+        CSS framework
+
+        Qual deles escolher?
+
+        ---------------------------------------------------
+        Tabelas HTML (HTML tables)?
+        ---------------------------------------------------
+        
+        O elemento <table> não foi projetado para ser uma ferramenta de layout! O propósito do elemento <table> é exibir dados tabulares. Sendo assim, não use tabelas
+        para o layout de sua página! Elas irão fazer o seu código ficar uma bagunça.
+        Imagine o quão difícil seria remodelar seu site após alguns meses.
+
+        Dica: Não utilize tabelas para o layout de suas páginas!
+
+        ---------------------------------------------------
+        Frameworks CSS (CSS Frameworks)
+        ---------------------------------------------------
+
+        Se você quiser criar seus layouts rápido, você pode usar um framework, como W3.CSS ou Bootstrap.
+
+        ---------------------------------------------------
+        CSS Floats
+        ---------------------------------------------------
+
+        É comum fazer todos os layouts de páginas web usando a propriedade float do CSS.
+        Float é fácil de aprender - você só precisa lembrar como as propriedades float e clear funcionam.
+
+        Desvantagens:
+        Elementos flutuantes estão ligados ao fluxo dos documentos o que pode prejudicar a flexibilidade.
+        Aprenda mais sobre float em nosso capítulo (https://www.w3schools.com/css/css_float.asp) CSS Float and Clear.
+
+    -->
+
+    <h2>CSS Layout Float</h2>
+    <p>
+        In this example, we have created a header, two columns/boxes and a footer. On
+        smaller screens, the columns will stack on top of each other.
+    </p>
+    <p>
+        Resize the browser window to see the responsive effect (you will learn more about
+        this chapter in our next chapter - HTML Responsive.)
+    </p>
+
+    <header>
+        <h2>Cities</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">London</a></li>
+                <li><a href="#">Paris</a></li>
+                <li><a href="#">Tokyo</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h1>London</h1>
+            <p>
+                London is the capital city of England.
+                It is the most populous city in the United Kingdom, with a metropolitan area over
+                13 million inhabitants.
+            </p>
+            <p>
+                Standing on the River Thames, London has been a major settlement for two
+                millennia, its history going back to its founding by the Romans, who named it Londinium.
+            </p>
+        </article>
+    </section>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+</body>
+
+</html>
