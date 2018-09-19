@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>HTML Entities</title>
+</head>
+
+<body>
+    <!--
+        HTML Entities
+
+        1. Caracteres reservados no HTML deve ser substituídos por character entities.
+        2. Caracteres que não estão presentes em seu teclado podem ser substituídos por entities.
+        3. Sintaxe:
+        3.1. Entity Name
+            &entity_name;
+            Vantagem: fácil de lembrar
+            Desvantagem: navegadores podem não suportar todos os nomes de entidades.
+        3.2. Entity Number
+            &#entity_number;
+            Vantagem: navegadores suportam praticamente todos os códigos de entidades.
+            Desvantagem: difícil de lembrar.
+    -->
+    <h1>HTML Entities</h1>
+
+    <hr>
+
+    <h2>Non-breaking Space</h2>
+    <p>
+        Meu nome é &nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;Thiago.
+    </p>
+    <div id="characterEntities"></div>
+    <hr>
+
+    <h2>Combining Diacritical Marks</h2>
+    <p>
+        a&amp;#768;&nbsp;&nbsp;&nbsp; a&#768;<br>
+        a&amp;#769;&nbsp;&nbsp;&nbsp; a&#769;<br>
+        a&amp;#770;&nbsp;&nbsp;&nbsp; a&#770;<br>
+        a&amp;#771;&nbsp;&nbsp;&nbsp; a&#771;<br>
+        O&amp;#768;&nbsp;&nbsp;&nbsp; O&#768;<br>
+        O&amp;#769;&nbsp;&nbsp;&nbsp; O&#769;<br>
+        O&amp;#770;&nbsp;&nbsp;&nbsp; O&#770;<br>
+        O&amp;#771;&nbsp;&nbsp;&nbsp; O&#771;<br>
+    </p>
+    <script>
+        window.onload = function () {
+            var characterEntitiesDiv = document.getElementById('characterEntities');
+            var html = '';
+            for (var i = 0; i < 5000; i++) {
+                html += '<code>&amp#' + i + '</code> - ';
+                html += '&#' + i;
+                html += '<br>';
+            }
+            characterEntitiesDiv.innerHTML = html;
+        };
+    </script>
+</body>
+
+</html>
