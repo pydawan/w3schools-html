@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 15px;
+        }
+
+        th {
+            text-align: left;
+        }
+
+        table {
+            /* 
+                Adiciona espaço entre as células da tabela.
+                Necessário remover border-collapse: collapse
+            */
+            border-spacing: 5px;
+        }
+
+        table {
+            width: 100%;
+            background-color: #f1f1c1;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #eee;
+        }
+
+        table tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        table th {
+            color: white;
+            background-color: black;
+        }
+    </style>
+    <title>HTML Forms</title>
+</head>
+
+<body>
+    <h1>HTML Forms</h1>
+
+    <hr>
+
+    <h2>O elemento &lt;form&gt;</h2>
+    <ol>
+        <li>O elemento &lt;form&gt; é utilizado para coletar dados de entrada do usuário.</li>
+        <li>Um formulário HTML contém elementos de formulário.</li>
+        <li>
+            Elementos de formulário são diferentes tipos de elementos de entrada como campos de texto (text fiedls),<br>
+            caixas de marcação de múltiplas opções (checkboxes), caixas de marcação de opção única, botões de envio
+            (submit buttons) e mais.
+        </li>
+        <li>O elemento &lt;input&gt; é o elemento mais importante do formulário.</li>
+        <li>O elemento &lt;input&gt; pode ser exibido de várias maneiras dependendo do atributo <b>type</b>.</li>
+    </ol>
+
+    <h3>Seguem alguns exemplos:</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Tipo (type)</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&lt;input type="text"&gt;</td>
+                <td>Define um campo de entrada de texto de uma linha.</td>
+            </tr>
+            <tr>
+                <td>&lt;input type="radio"&gt;</td>
+                <td>Define um radio button (para seleção de uma entre várias opções)</td>
+            </tr>
+            <tr>
+                <td>&lt;input type="submit"&gt;</td>
+                <td>Define um submit button (para envio do formulário)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <hr>
+    <br>
+
+    <h2>Text Input</h2>
+    <p>&lt;input type="text"&gt; define um campo de texto de uma linha para <b>entrada de texto</b>:</p>
+
+    <!--
+        Text Input
+
+        1. Define uma campo de entrada de texto de linha única.
+        2. O elemento <form> não é visível.
+        3. A largura padrão deste campo de entrada é de 20 caracteres.
+    -->
+
+    <form>
+        First name:<br>
+        <input type="text" name="firstname"><br>
+        Last name:<br>
+        <input type="text" name="lastname">
+    </form>
+
+    <br>
+    <hr>
+    <br>
+
+    <h2>Radio Button Input</h2>
+    <p>
+        &lt;input type="radio"&gt; define um radio button.
+    </p>
+    <!--
+        Radio Button Input
+
+        1. Radio buttons deixam o usuário selecionar uma opção dentre um número limitado de opções.
+    -->
+    <form>
+        <input type="radio" name="gender" value="male" checked>Male<br>
+        <input type="radio" name="gender" value="female">Female<br>
+        <input type="radio" name="gender" value="other">Other
+    </form>
+
+    <br>
+    <hr>
+    <br>
+
+    <h2>The Submit Button</h2>
+    <p>
+        &lt;input type="submit"&gt; define um botão para enviar os dados do formulário para um manipulador de
+        formulário (form-handler) ou melhor dizendo, um processador de formulário.<br><br>
+
+        O form-handler tipicamente é uma página do servidor com um script para processamento de dados de entrada.<br><br>
+
+        O form-handler é especificado no atributo <b>action</b> do formulário.
+    </p>
+
+    <form action="/action_page.php">
+        First name:<br>
+        <input type="text" name="firstname" value="Mickey"><br>
+        Last name:<br>
+        <input type="text" name="lastname" value="Mouse"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!--
+        The Action Attribute
+
+        1. O atributo action define a ação a ser desempenhada ao enviar o formulário.
+        2. Normalmente os dados do formulário são enviados para uma página web no servidor quando o usuário clica no botão submit.
+        3. Se o atributo action foi omitido, ele é definido como sendo a página atual.
+
+        <form action="/action_page.php">
+    -->
+
+    <!--
+        The Target Attribute
+
+        1. O atributo target especifica se o resultado do envio será aberto em uma nova aba, frame ou na janela atual.
+        2. O valor padrão é _self que significa que o formulário será submetido na janela atual.
+        3. Para fazer o resultado do formulário abrir em uma nova aba do navegador, use o valor _blank.
+
+        <form action="/action_page.php" target="_blank">
+
+        4. Outros valores legais são _parent, _top ou um nome representando o nome de um iframe.
+    -->
+
+    <!--
+        The Method Attribute
+
+        1. O atributo method especifica que o método HTTP (GET ou POST) ser usado ao submeter (enviar) os dados formulários.
+        1.1 <form action="/action_page.php" method="get">
+        1.2 <form action="/action_page.php" method="post">
+    -->
+
+    <!--
+        When to Use GET?
+
+        O método padrão ao submeter os dados de um formulário é o GET
+        entranto quando o GET é usado os dados submetidos do formulário serão visíveis no campo de endereço da página:
+        
+        /action_page.php?firstname=Mickey&lastname=Mouse
+
+        1. Anexa os dados do formulário na URL em pares nome/valor.
+        2. O comprimento de uma URL é limitado (cerca de 3000 caracteres).
+        3. Nunca use o GET para enviar data sensíveis! (eles serão visíveis na URL)
+        4. Útil para submissões de formulário onde um usuário deseja marcar (favoritar) o resultado.
+        5. O GET é melhor para dados não seguros, como query strings no Google.
+    -->
+
+    <!--
+        When to Use POST?
+
+        Sempre use o POST se os dados do formulário contém informações sensíveis ou pessoais.
+        O método POST não mostra os dados de formulário submetidos no campo de endereço da página.
+        
+        1. O POST não tem limitações de tamanho e pode ser usado para enviar grandes quantidades de dados.
+        2. Submissões de formulário com POST não podem ser marcadas (favoritadas).
+    -->
+
+    <br>
+    <hr>
+    <br>
+
+    <!--
+        The Name Attribute
+
+        Cada campo de entrada têm um atributo nome a ser submetido (enviado).
+
+        Se o atributo nome é omitido os dados daquele campo de entrada não serão enviados.
+    -->
+
+    <!-- Este exemplo somente submeterá o campo de entrada "Last name" -->
+    <form action="/action_page.php">
+        Fist name:<br>
+        <input type="text" value="Mickey"><br>
+        Last name:<br>
+        <input type="text" name="lastname" value="Mouse"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <br>
+    <hr>
+    <br>
+
+    <h2>Grouping Form Data with &lt;fieldset&gt;</h2>
+    <!--
+        Grouping Form Data with <fieldset>
+
+        1. O elemento <fieldset> é usado para agrupar dados relacionados em um formulário.
+        2. O elemento <legend> define um título para o elemento <fieldset>.
+    -->
+    <p>
+        <form action="/action_page.php">
+            <fieldset>
+                <legend>Personal information:</legend>
+                First name:<br>
+                <input type="text" name="firstname" value="Mickey"><br>
+                Last name:<br>
+                <input type="text" name="lastname" value="Mouse"><br><br>
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+    </p>
+
+    <!--
+        Form Attributes
+
+        1. accept-charset   Especifica o charset usado ao enviar o formulário (padrão: charset da página).
+        2. action           Especifica o endereço (url) para onde o formulário será enviado (padrão: a página onde é feito o envio).
+        3. autocomplete     Especifica se o navegador deve autocompletar o formulário (padrão: on).
+        4. enctype          Especifica a codificação dos dados enviados (padrão: url-encoded).
+        5. method           Especifica o método HTTP usado ao enviar o formulário (padrão: GET).
+        6. name             Especifica o nome usado para identificar o formulário (para uso do DOM: document.forms.name)
+        7. novalidate       Especifica que o navegador não deve validar o formulário.
+        8. target           Especifica o alvo (target) do endereço no atributo action (padrão: _self).
+    -->
+
+
+</body>
+
+</html>
