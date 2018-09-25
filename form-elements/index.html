@@ -58,6 +58,63 @@
 
         <button type="button" onclick="alert('Hello World!')">Click Me!</button>
 
+        <br>
+        <hr>
+        <br>
+
+        <h2>HTML 5 Form Elements</h2>
+        <!--
+            O HTML5 acrescentou os elementos de formulário a seguir:
+
+            * <datalist>
+            * <output>
+
+            Observação: Os navegadores não exibem elementos desconhecidos. Novos elementos que não são suportados por navegadores antigos
+            não irão destruir sua página web.
+        -->
+        <h2>HTML5 &lt;datalist&gt; Element</h2>
+        <!--
+            HTML5 <datalist> Element
+
+            O elemento <datalist> especifica uma lista pré-definida de opções para um elemento <input>.
+
+            Usuários verão uma lista drop-down com opções pré-definidas como seus dados de entrada.
+
+            O atributo list do elemento input, deve ser referenciado no atributo id do elemento <datalist>.
+        -->
+
+        <form action="/action_page.php">
+            <input list="browsers">
+            <datalist id="browsers">
+                <option value="Internet Explorer">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist>
+        </form>
+
+        <br>
+        <hr>
+        <br>
+
+        <h2>HTML5 &lt;output&gt; Element</h2>
+        <!--
+            HTML5 <output> Element
+
+            O elemento <output> representa o resultado de um cálculo (como um desempenhado por um script).
+        -->
+        <form action="/action_page.php" oninput="x.value = parseInt(a.value) + parseInt(b.value)">
+            0
+            <input type="range" id="a" name="a" value="50">
+            100 +
+            <input type="number" id="b" name="b" value="50">
+            =
+            <output name="x" for="a b"></output>
+            <br><br>
+            <input type="submit">
+        </form>
+
     </form>
 
 </body>
