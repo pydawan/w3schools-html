@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>HTML Input Types</title>
+    </head>
+    <body>
+        
+        <h1>HTML Input Types</h1>
+        
+        <br>
+        <hr>
+        <br>
+
+        <h2>Input Type Text</h2>
+        <form>
+            First name:<br>
+            <input type="text" name="firstname"><br>
+            Last name:<br>
+            <input type="text" name="lastname">
+        </form>
+
+        <br>
+        <hr>
+        <br>
+
+        <h2>Input Type Password</h2>
+        <form>
+            User name:<br>
+            <input type="text" name="username"><br>
+            User password:<br>
+            <input type="password" name="psw">
+        </form>
+
+        <br>
+        <hr>
+        <br>
+
+        <h2>Input Type Submit</h2>
+        <form action="/action_page.php">
+            First name:<br>
+            <input type="text" name="firstname" value="Mickey"><br>
+            Last name:<br>
+            <input type="text" name="lastname" value="Mouse"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <br>
+        <hr>
+        <br>
+
+        <h2>Input Type Reset</h2>
+        <form action="/action_page.php">
+            First name:<br>
+            <input type="text" name="firstname" value="Mickey"><br>
+            Last name:<br>
+            <input type="text" name="lastname" value="Mouse"><br><br>
+            <input type="submit" value="Submit">
+            <input type="reset">
+        </form>
+
+        <br>
+        <hr>
+        <br>
+
+        <h2>Input Type Radio</h2>
+        <form>
+            <input type="radio" name="gender" value="male" checked>Male<br>
+            <input type="radio" name="gender" value="female">Female<br>
+            <input type="radio" name="gender" value="other">Other
+        </form>
+
+        <br>
+        <hr>
+        <br>
+
+        <h2>Input Type Checkbox</h2>
+        <form>
+            <input type="checkbox" name="vehicle1" value="Bike">I have a bike<br>
+            <input type="checkbox" name="vehicle2" value="Car">I have a car
+        </form>
+
+        <br>
+        <hr>
+        <br>
+
+        <h2>Input Type Button</h2>
+        <form>
+            <input type="button" onclick="alert('Hello World!')" value="Click Me!">
+        </form>
+
+        <br>
+        <hr>
+        <br>
+
+        <h2>HTML5 Input Types</h2>
+        <!--
+            HTML5 Input Types
+
+            O HTML5 acrescentou vários tipos novos de campos de entrada de dados:
+
+            * color
+            * date
+            * datetime-local
+            * email
+            * month
+            * number
+            * range
+            * search
+            * tel
+            * time
+            * url
+            * week
+
+            Observação: Novos tipos de campos de entrada não suportados por navegadores antigos irão se comportar como <input type="text">.
+        -->
+
+        <h2>Input Type Color</h2>
+        <form>
+            Select your favorite color:
+            <input type="color" name="favcolor">
+        </form>
+
+        <br>
+        <hr>
+        <br>
+
+        <h2>Input Type Date</h2>
+        <form>
+            Birthday:
+            <input type="date" name="bday">
+        </form>
+
+        <br>
+
+        <form>
+            Enter a date before 1980-01-01:
+            <input type="date" name="bday" max="1979-12-31"><br>
+            Enter a date after 2000-01-01:
+            <input type="date" name="bday" min="2000-01-02"><br>
+        </form>
+
+        <br>
+        <hr>
+        <br>
+
+        <h2>Input Type Datetime-local</h2>
+        <!--
+            <input type="datetime-local"> especifica um campo de entrada de data e hora sem timezone.
+        -->
+        <form>
+            Birthday (date and time):
+            <input type="datetime-local" name="bdaytime">
+        </form>
+
+        <br>
+        <hr>
+        <br>
+
+        <h2>Input Type Email</h2>
+        <form>
+            E-mail:
+            <input type="email" name="email">
+        </form>
+
+        <br>
+        <hr>
+        <br>
+
+        <h2>Input Type File</h2>
+        <form>
+            Select a file: <input type="file" name="myFile">
+        </form>
+
+        <br>
+        <hr>
+        <br>
+
+        <h2>Input Type Month</h2>
+        <form>
+            Birthday (month and year):
+            <input type="mont" name="bdaymonth">
+        </form>
+
+        <br>
+        <hr>
+        <br>
+
+        <h2>Input Type Number</h2>
+        <form>
+            Quantity (between 1 and 5):
+            <input type="number" name="quantity" min="1" max="5">
+        </form>
+
+        <!--
+            Input Restrictions
+
+            * disabled          Especifica que um campo de entrada deve ser desabilitado.
+            * max               Especifica o valor máximo para um campo de entrada.
+            * maxlength         Especifica o número máximo de caracteres para um campo de entrada.
+            * min               Especifica o valor mínimo para um campo de entrada.
+            * pattern           Especifica uma expressão regular com a qual se verificará o valor do campo de entrada.
+            * readonly          Especifica que um campo de entrada é somente leitura (não pode ser alterado).
+            * required          Especifica que um campo de entrada têm seu preenchimento obrigatório.
+            * size              Especifica a largura (em caracteres) de um campo de entrada.
+            * step              Especifica um número legal de intervalos para um campo de entrada.
+            * value             Especifica o valor padrão de um campo de entrada.
+        -->
+
+        <form>
+            Quantity:
+            <input type="number" name="points" min="0" max="100" step="10" value="30">
+        </form>
+
+        <br>
+        <hr>
+        <br>
+
+        <h2>Input Type Range</h2>
+        <form>
+            <input type="range" name="points" min="0" max="10">
+        </form>
+        
+        <br>
+        <hr>
+        <br>
+
+        <h2>Input Type Search</h2>
+        <!-- 
+            É usado para campos de pesquisa (um campo de pesquisa comporta-se como um campo de texto comum).
+        -->
+        <form>
+            Search Google:
+            <input type="search" name="googlesearch">
+        </form>
+
+        <br>
+        <hr>
+        <br>
+
+        <h2>Input Type Tel</h2>
+        <form>
+            Telephone:
+            <input type="tel" name="usrtel">
+        </form>
+
+        <br>
+        <hr>
+        <br>
+
+        <h2>Input Type Time</h2>
+        <form>
+            Select a time:
+            <input type="time" name="usr_time">
+        </form>
+
+        <br>
+        <hr>
+        <br>
+
+        <h2>Input Type Url</h2>
+        <form>
+            Add your homepage:
+            <input type="url" name="homepage">
+        </form>
+
+        <br>
+        <hr>
+        <br>
+
+        <h2>Input Type Week</h2>
+        <form>
+            Select a week:
+            <input type="week" name="week_year">
+        </form>
+    </body>
+</html>
